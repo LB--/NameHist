@@ -1,0 +1,75 @@
+
+name: "NameHist"
+version: ${project.version}
+description: "Allows players to see the name history of other players."
+#load: POSTWORLD
+main: com.lb_stuff.namehist.NameHistPlugin
+authors:
+  - "Nicholas \"LB\" Braden"
+website: http://dev.bukkit.org/bukkit-plugins/namehist/
+database: false
+depend: []
+#prefix: "\xa7bNameHist\xa7r"
+softdepend: ["TagAPI", "EventFilterServices"]
+loadbefore: []
+awareness:
+- !@UTF8
+
+commands:
+  NameHist:
+    description: "Display \xa7ainfo\xa7r about \xa7bNameHist\xa7r, or get \xa7aname history\xa7r for a player"
+    usage: "/<command> \xa7b[\xa7roptional-playername\xa7b]\xa7r \xa7b[\xa7roptional-date-last-seen-M/D/Y\xa7b]"
+    permission: NameHist
+    permission-message: "\xa7cYou do not have permission."
+    aliases:
+      - nh
+      - names
+      - usernames
+      - history
+      - namehistory
+      - oldnames
+      - prevnames
+      - previousnames
+      - oldusernames
+      - whowas
+      - newname
+      - futurename
+  NamePrefer:
+    description: "\xa7aRevert\xa7r a player's name to one of their \xa7bprevious names\xa7r just for \xa7byou only"
+    usage: "/<command> \xa7b[\xa7rcurrent-username\xa7b]\xa7r \xa7b[\xa7rpast-username-or-date\xa7b]\xa7r"
+    permission: NameHist.prefer
+    permission-message: "\xa7cYou do not have permission."
+    aliases:
+      - nhprefer
+      - namepref
+      - nhpref
+      - prefername
+      - showoldname
+  nhreload:
+    description: "\xa7dReload and regenerate the config file"
+    usage: "/<command>"
+    permission: NameHist.reload
+    permission-message: "You do not have permission."
+
+permissions:
+  NameHist.*:
+    description: "Gives access to all NameHist permissions"
+    children:
+      NameHist: true
+      NameHist.prefer: true
+      NameHist.reload: true
+      NameHist.update-notify: true
+    default: op
+  NameHist:
+    description: "See version/author infrmation about NameHist, or get player name history"
+    default: true
+    default: true
+  NameHist.prefer:
+    description: "Allows for individual players to personalize which name they see for others"
+    default: true
+  NameHist.reload:
+    description: "Allows use of the /nhreload command to reload and regenerate the config"
+    default: op
+  NameHist.update-notify:
+    description: "Players with this permission are notified of updates to NameHist"
+    default: op

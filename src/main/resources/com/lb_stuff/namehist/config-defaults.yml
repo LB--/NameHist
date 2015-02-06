@@ -1,0 +1,15 @@
+# This file contains the default values used to generate the config
+# from the template when the existing config is missing nodes
+
+auto-updater: true
+
+use-tagapi: true
+
+use-eventfilter: true
+
+messages:
+  not-yet-implemented: "&cNot yet implemented."
+
+debug: false
+
+version: 0
