@@ -18,7 +18,7 @@ awareness:
 commands:
   NameHist:
     description: "Display \xa7ainfo\xa7r about \xa7bNameHist\xa7r, or get \xa7aname history\xa7r for a player"
-    usage: "/<command> \xa7b[\xa7roptional-playername\xa7b]\xa7r \xa7b[\xa7roptional-date-last-seen-M/D/Y\xa7b]"
+    usage: "/<command> \xa7b[\xa7roptional-playername\xa7b]\xa7r \xa7b[\xa7roptional-date-last-seen-YYYY-MM-DD\xa7b]"
     permission: NameHist
     permission-message: "\xa7cYou do not have permission."
     aliases:
@@ -36,7 +36,7 @@ commands:
       - futurename
   NamePrefer:
     description: "\xa7aRevert\xa7r a player's name to one of their \xa7bprevious names\xa7r just for \xa7byou only"
-    usage: "/<command> \xa7b[\xa7rcurrent-username\xa7b]\xa7r \xa7b[\xa7rpast-username-or-date\xa7b]\xa7r"
+    usage: "/<command> \xa7b[\xa7rcurrent-username\xa7b]\xa7r \xa7b[\xa7rpast-username-or-date-YYYY-MM-DD\xa7b]\xa7r"
     permission: NameHist.prefer
     permission-message: "\xa7cYou do not have permission."
     aliases:

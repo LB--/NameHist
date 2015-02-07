@@ -8,7 +8,11 @@ use-tagapi: true
 use-eventfilter: true
 
 messages:
-  not-yet-implemented: "&cNot yet implemented."
+  please-wait-name: "Hang tight, it may take a moment to look up \xa7b%1$s\xa7r's name history..."
+  erroneous-errors: "Sorry, something bad happened when we asked Mojang about \xa7c%1$s\xa7r"
+  history-original: "\xa7b%1$s16\xa7r (\xa7ooriginal\xa7r)"
+  history-historic: "\xa7b%1$s16\xa7r (%2$s)"
+  history-realtime: "\xa7b%1$s16\xa7r (%2$s - \xa7ocurrent\xa7r)"
 
 debug: false
 
